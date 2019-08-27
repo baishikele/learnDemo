@@ -11,5 +11,6 @@ target 'swiftDemo' do
    pod 'URLNavigator', '~> 2.2.0'
    pod 'PromiseKit', '~> 6.10.0'
    pod 'MJRefresh', '~> 3.2.0'
+   pod 'SnapKit', '~> 5.0.1'
 
 end

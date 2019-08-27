@@ -24,10 +24,7 @@ class NotFirstResponderBaseTableView: UITableView {
     }
     */
     var responsDelegate: tableViewResponsProtocal?
-    
-    
-
-    
+      
     override func awakeFromNib() {
         super.awakeFromNib()
         

@@ -8,6 +8,8 @@
 let offsetYBeginToRefresh = CGFloat(80)
 
 import UIKit
+import MJRefresh
+import SnapKit
 
 class DouYinViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var navBarView: UIView!
@@ -17,28 +19,47 @@ class DouYinViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: NotFirstResponderBaseTableView!
     private var startY: CGFloat?
     private var isRefreshing = false
-    
+    private var dataArray : [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.navigationController?.isNavigationBarHidden = true
-
+        self.tableView.isPagingEnabled = true
         self.tableView.responsDelegate = self
+        self.tableView.estimatedRowHeight = 0.01
+        
+        self.dataArray.append("我")
+        self.dataArray.append("是")
+        self.dataArray.append("大")
+
+        self.tableView.th_footer = DouYinFooterView.xibInitWithName(name: "DouYinFooterView", height: 40, beginToLoad: {
+            print("开始加载更多拉")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+                self.dataArray.append("好")
+                self.dataArray.append("人")
+                self.tableView.reloadData()
+                self.tableView.th_footer?.endLoadMore()
+
+            })
+          
+        })
+    
+        
     }
     override var prefersStatusBarHidden: Bool{
         return true
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.dataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let cell = tableView.dequeueReusableCell(withIdentifier: "DouYinCellID") ?? UITableViewCell()
-        cell.textLabel?.text = String(indexPath.row)
+        let s = self.dataArray[indexPath.row]
+        cell.textLabel?.text = s+" "+String(indexPath.row)
         
-        cell.textLabel?.backgroundColor = UIColor.init(red: CGFloat(arc4random()%250), green: CGFloat(arc4random()%250), blue: CGFloat(arc4random()%250), alpha: 1)
         return cell
     }
 
@@ -69,9 +90,7 @@ extension DouYinViewController: tableViewResponsProtocal {
         
         let currentPoint = touches.first?.location(in: self.view)
        
-        guard let startY = self.startY, let curPoint = currentPoint else { return }
-
-        let moveDistance = curPoint.y - startY
+        guard let curPoint = currentPoint else { return }
         
         let prePoint = touches.first?.previousLocation(in: self.view)
 
@@ -93,8 +112,12 @@ extension DouYinViewController: tableViewResponsProtocal {
             }
     
         }else{
-            print("上拉")
 
+            if  self.tableView.contentOffset.y > (self.tableView.contentSize.height - UIScreen.main.bounds.size.height + 40){
+                print("显示加载更多")
+
+                self.tableView.th_footer?.beginToLoadMore()
+            }
         }
         if self.navBarViewTopConstrain.constant < 30{
             self.navBarViewTopConstrain.constant = 30
@@ -108,14 +131,12 @@ extension DouYinViewController: tableViewResponsProtocal {
         
         if self.isRefreshing == true {return}
         
-            let currentPoint = touches.first?.location(in: self.view)
-        
             if tableView.contentOffset.y < 0 {
                 
-                guard let curPoint = currentPoint else { return }
-                
                 UIView.animate(withDuration: 1) {
-                    if curPoint.y - (self.startY ?? CGFloat(0)) < offsetYBeginToRefresh-30{
+                    
+                    if -self.tableView.contentOffset.y < offsetYBeginToRefresh {
+
                         self.navBarViewTopConstrain.constant = 30
                         
                     }else{
@@ -142,6 +163,10 @@ extension DouYinViewController: tableViewResponsProtocal {
                
          
             }
+//            else if self.tableView.contentOffset.y > (self.tableView.contentSize.height - UIScreen.main.bounds.size.height + 40){
+//                print("触发加载更多")
+//                
+//            }
 
     }
     
@@ -157,8 +182,8 @@ extension DouYinViewController: tableViewResponsProtocal {
     func addLayerAnimationTranformRotationX(layer: CALayer) {
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
         //旋转180度 = PI
-        animation.toValue = M_PI
-        animation.duration = 3
+        animation.toValue = Double.pi
+        animation.duration = 2
         animation.repeatCount = MAXFLOAT
         //这里我们可以添加可以不添加，添加一个缓慢进出的动画效果(int/out)。当不添加时，匀速运动，会使用kCAMediaTimingFunctionLinear；当添加时，layer会在开始和结束时比较缓慢
 //        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)

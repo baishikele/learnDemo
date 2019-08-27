@@ -15,7 +15,7 @@ class TestTableViewViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        self.tableView.isPagingEnabled = true
+        self.tableView.isPagingEnabled = true
         self.navigationController?.isNavigationBarHidden = true
         
 //        DispatchQueue.main.asyncAfter(deadline: .now()+2) {

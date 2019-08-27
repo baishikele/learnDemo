@@ -19,6 +19,8 @@
 		149C0F2F230F7EE300DC6E2D /* DouYinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0F2E230F7EE300DC6E2D /* DouYinViewController.swift */; };
 		149C0F31230F85AA00DC6E2D /* NotFirstResponderBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0F30230F85AA00DC6E2D /* NotFirstResponderBaseTableView.swift */; };
 		149C0F39230F91B300DC6E2D /* TestTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0F38230F91B300DC6E2D /* TestTableViewViewController.swift */; };
+		149C0F3B23138ECB00DC6E2D /* DouYinFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0F3A23138ECB00DC6E2D /* DouYinFooterView.swift */; };
+		149C0F3D23138ED600DC6E2D /* DouYinFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 149C0F3C23138ED600DC6E2D /* DouYinFooterView.xib */; };
 		14C405F3230403D900B400F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C405F2230403D900B400F2 /* AppDelegate.swift */; };
 		14C405F5230403D900B400F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C405F4230403D900B400F2 /* ViewController.swift */; };
 		14C405F8230403D900B400F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C405F6230403D900B400F2 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		149C0F30230F85AA00DC6E2D /* NotFirstResponderBaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFirstResponderBaseTableView.swift; sourceTree = "<group>"; };
 		149C0F32230F8C4900DC6E2D /* swiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		149C0F38230F91B300DC6E2D /* TestTableViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewViewController.swift; sourceTree = "<group>"; };
+		149C0F3A23138ECB00DC6E2D /* DouYinFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouYinFooterView.swift; sourceTree = "<group>"; };
+		149C0F3C23138ED600DC6E2D /* DouYinFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DouYinFooterView.xib; sourceTree = "<group>"; };
 		14C405EF230403D900B400F2 /* swiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C405F2230403D900B400F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14C405F4230403D900B400F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				149C0F2E230F7EE300DC6E2D /* DouYinViewController.swift */,
 				149C0F30230F85AA00DC6E2D /* NotFirstResponderBaseTableView.swift */,
 				149C0F32230F8C4900DC6E2D /* swiftDemo-Bridging-Header.h */,
+				149C0F3A23138ECB00DC6E2D /* DouYinFooterView.swift */,
+				149C0F3C23138ED600DC6E2D /* DouYinFooterView.xib */,
 			);
 			path = DouYin;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149C0F3D23138ED600DC6E2D /* DouYinFooterView.xib in Resources */,
 				149C0F15230BC9BE00DC6E2D /* accessSystemFunc_logo@2x.png in Resources */,
 				14C405FD230403D900B400F2 /* LaunchScreen.storyboard in Resources */,
 				14C405FA230403D900B400F2 /* Assets.xcassets in Resources */,
@@ -267,6 +274,7 @@
 				149C0F39230F91B300DC6E2D /* TestTableViewViewController.swift in Sources */,
 				14F161D1230505CF003DDB55 /* LoginViewController.swift in Sources */,
 				149C0F17230D1ACB00DC6E2D /* NavigatorViewController.swift in Sources */,
+				149C0F3B23138ECB00DC6E2D /* DouYinFooterView.swift in Sources */,
 				149C0F12230BC5CE00DC6E2D /* RXCodeViewController.swift in Sources */,
 				14C405F5230403D900B400F2 /* ViewController.swift in Sources */,
 				149C0F31230F85AA00DC6E2D /* NotFirstResponderBaseTableView.swift in Sources */,
