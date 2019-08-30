@@ -12,5 +12,9 @@ target 'swiftDemo' do
    pod 'PromiseKit', '~> 6.10.0'
    pod 'MJRefresh', '~> 3.2.0'
    pod 'SnapKit', '~> 5.0.1'
+   pod 'BSCategories', '0.0.6'
+   pod 'Realm', '~> 3.17.3'
+   pod 'ReactiveCocoa', '~> 10.0.0'
+   pod 'HandyJSON', '~> 5.0.0'
 
 end

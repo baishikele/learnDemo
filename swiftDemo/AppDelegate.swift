@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HandyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,9 +27,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.synchronize()
         
         
+        testHandyJson()
+
+        return true
+    }
+
+    func testHandyJson() -> Void {
         
-        
-        
+        let dict = HelpReadJsonFile.readJsonFile() as? [String: Any]
+        if let model = GetUserCfgModel.deserialize(from: dict){
+            print(model.data.video_cfg?.video_max_second)
+        }
+
+    }
+    
+    func testProtocel() -> Void {
         let ob = "{\"name\":\"Hally\",\"age\":2}".toObject(UserInfo.self)
         
         print(ob?.name ?? "default")
@@ -43,10 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let color = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
         data.pq.toHex()
         color.pq.blue()
-
-        return true
     }
-
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

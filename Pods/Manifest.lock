@@ -1,4 +1,6 @@
 PODS:
+  - BSCategories (0.0.6)
+  - HandyJSON (5.0.0)
   - MJRefresh (3.2.0)
   - PromiseKit (6.10.0):
     - PromiseKit/CorePromise (= 6.10.0)
@@ -9,6 +11,12 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.10.0):
     - PromiseKit/CorePromise
+  - ReactiveCocoa (10.0.0):
+    - ReactiveSwift (~> 6.0)
+  - ReactiveSwift (6.0.0)
+  - Realm (3.17.3):
+    - Realm/Headers (= 3.17.3)
+  - Realm/Headers (3.17.3)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -19,8 +27,12 @@ PODS:
   - URLNavigator (2.2.0)
 
 DEPENDENCIES:
+  - BSCategories (= 0.0.6)
+  - HandyJSON (~> 5.0.0)
   - MJRefresh (~> 3.2.0)
   - PromiseKit (~> 6.10.0)
+  - ReactiveCocoa (~> 10.0.0)
+  - Realm (~> 3.17.3)
   - RxCocoa (~> 5.0)
   - RxSwift (~> 5.0.0)
   - SnapKit (~> 5.0.1)
@@ -28,8 +40,13 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - BSCategories
+    - HandyJSON
     - MJRefresh
     - PromiseKit
+    - ReactiveCocoa
+    - ReactiveSwift
+    - Realm
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -37,14 +54,19 @@ SPEC REPOS:
     - URLNavigator
 
 SPEC CHECKSUMS:
+  BSCategories: 6cb25119e32d68d67bb2da353d374bbc1875c520
+  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
+  ReactiveCocoa: 6d4c37ba236f5d9a7a55b2172cd09f19ba85f574
+  ReactiveSwift: 24b7ed245617bbfd30ee0c87779b6c64ac1b4518
+  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   URLNavigator: 0bffc3efdeb2d97f7b5eec7ac82d290f4a099431
 
-PODFILE CHECKSUM: d582243c496337e649ad7fc3685630e48e3c19d8
+PODFILE CHECKSUM: 655b9f0f7c9fe4bb4292d190e7f4f93f8e3abf24
 
 COCOAPODS: 1.7.5

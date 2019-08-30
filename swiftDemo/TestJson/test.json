@@ -1,0 +1,58 @@
+{
+    "code": "0",
+    "action": "toast",
+    "message": "",
+    "data": {
+        "video_cfg": {
+            "video_min_second": 2,
+            "video_max_second": "30",
+            "publish_auth": 0
+        },
+        "live_cfg": {
+            "agreementUrl": "http:\/\/live.jumeicd.com\/show\/h5\/html\/agreement.html?isAgree=1",
+            "liveCover": [],
+            "liveUgc": {
+                "status": "2",
+                "switchStatus": "1"
+            },
+            "sdkTypes": [],
+            "title": "我开播啦~快来看看我吧~",
+            "topicList": [],
+            "userLiveInfo": {
+                "adStatus": 0
+            },
+            "videoInfoSwitch": {
+                "allowToLive": "0",
+                "allowedFormat": "MP4,M4V,MOV",
+                "bitrate": "921600",
+                "framerate": "25",
+                "iframe": "10",
+                "isCompress": "1",
+                "maxResolution": "1080",
+                "maxSecond": "600",
+                "maxSize": "300",
+                "message": "短视频功能尚未完全开放，敬请期待",
+                "minSecond": "10"
+            },
+            "default_city": "北京",
+            "promo": {
+                "icon_switch": "0",
+                "h5_url": "http:\/\/h5.rd.shuabaola.cn\/activity\/ugc_new\/index",
+                "recharge_list_url": "http:\/\/h5.rd.shuabaola.cn\/activity\/ugc_new\/recharge_list",
+                "un_live_pop": [
+                    "亲，您有未消耗的金额，我们已放至您的推广余额中~",
+                "下次推广可继续使用"],
+                "live_pop": [
+                    "亲，您有未消耗的金额，我们已放至您的推广余额中~",
+                "您可继续直播"]
+            },
+            "property_right": {
+                "property_switch": 1,
+                "show_type": 1,
+                "title": "温馨提示",
+                "content": "刷宝尊重并保护知识产权，支持原创。希望您遵守知识产权相关法律，确保您制作、上传的视频及其中的内容不侵犯他人的知识产权及其他合法权益。"
+            }
+        }
+    },
+    "popup_windows": []
+}

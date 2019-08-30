@@ -36,12 +36,10 @@ class DouYinFooterView: UIView {
         super.didMoveToSuperview()
 
         if let tableView = self.superview as? UITableView {
-
             
             tableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
             tableView.addObserver(self, forKeyPath: "contentOffset", options: .new, context: nil)
 
-            
         }
         
         
@@ -90,7 +88,7 @@ class DouYinFooterView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if let tableView = self.superview as? UITableView{
+        if (self.superview as? UITableView) != nil{
             self.mj_x = 0
             self.mj_h = 40
             self.mj_w = UIScreen.main.bounds.size.width

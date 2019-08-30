@@ -20,6 +20,7 @@ class DouYinViewController: UIViewController, UITableViewDataSource, UITableView
     private var startY: CGFloat?
     private var isRefreshing = false
     private var dataArray : [String] = []
+    private var currentIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,9 +39,10 @@ class DouYinViewController: UIViewController, UITableViewDataSource, UITableView
             DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                 self.dataArray.append("好")
                 self.dataArray.append("人")
-                self.tableView.reloadData()
                 self.tableView.th_footer?.endLoadMore()
+                self.tableView.reloadData()
 
+                self.tableView.scrollToRow(at: IndexPath(row: self.currentIndex, section: 0), at: .top, animated: false)
             })
           
         })
@@ -114,7 +116,13 @@ extension DouYinViewController: tableViewResponsProtocal {
         }else{
 
             if  self.tableView.contentOffset.y > (self.tableView.contentSize.height - UIScreen.main.bounds.size.height + 40){
-                print("显示加载更多")
+//                let index = (self.tableView.contentSize.height-UIScreen.main.bounds.size.height)/UIScreen.main.bounds.size.height
+//                self.currentIndex = Int(index)
+                if let cell = self.tableView.visibleCells.first{
+                    self.currentIndex = tableView.indexPath(for: cell)?.row ?? 0
+
+                }
+                print("显示加载更多+ \(self.currentIndex)")
 
                 self.tableView.th_footer?.beginToLoadMore()
             }
@@ -135,7 +143,7 @@ extension DouYinViewController: tableViewResponsProtocal {
                 
                 UIView.animate(withDuration: 1) {
                     
-                    if -self.tableView.contentOffset.y < offsetYBeginToRefresh {
+                    if -self.tableView.contentOffset.y < offsetYBeginToRefresh-30 {
 
                         self.navBarViewTopConstrain.constant = 30
                         
@@ -163,10 +171,10 @@ extension DouYinViewController: tableViewResponsProtocal {
                
          
             }
-//            else if self.tableView.contentOffset.y > (self.tableView.contentSize.height - UIScreen.main.bounds.size.height + 40){
-//                print("触发加载更多")
-//                
-//            }
+            else if self.tableView.contentOffset.y > (self.tableView.contentSize.height - UIScreen.main.bounds.size.height + 40){
+                print("触发加载更多")
+                
+            }
 
     }
     

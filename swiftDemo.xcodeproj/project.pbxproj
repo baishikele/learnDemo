@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149319EB2318B4960077774C /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 149319EA2318B4960077774C /* test.json */; };
+		149319ED2318B4D40077774C /* HelpReadJsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149319EC2318B4D40077774C /* HelpReadJsonFile.swift */; };
+		149319EF2318B7C80077774C /* GetUserCfgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149319EE2318B7C80077774C /* GetUserCfgModel.swift */; };
 		149C0F12230BC5CE00DC6E2D /* RXCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0F10230BC5CE00DC6E2D /* RXCodeViewController.swift */; };
 		149C0F15230BC9BE00DC6E2D /* accessSystemFunc_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 149C0F14230BC9BE00DC6E2D /* accessSystemFunc_logo@2x.png */; };
 		149C0F17230D1ACB00DC6E2D /* NavigatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C0F16230D1ACB00DC6E2D /* NavigatorViewController.swift */; };
@@ -31,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		149319EA2318B4960077774C /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		149319EC2318B4D40077774C /* HelpReadJsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpReadJsonFile.swift; sourceTree = "<group>"; };
+		149319EE2318B7C80077774C /* GetUserCfgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserCfgModel.swift; sourceTree = "<group>"; };
 		149C0F10230BC5CE00DC6E2D /* RXCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXCodeViewController.swift; sourceTree = "<group>"; };
 		149C0F14230BC9BE00DC6E2D /* accessSystemFunc_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "accessSystemFunc_logo@2x.png"; sourceTree = "<group>"; };
 		149C0F16230D1ACB00DC6E2D /* NavigatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +77,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		149319E92318B4790077774C /* TestJson */ = {
+			isa = PBXGroup;
+			children = (
+				149319EA2318B4960077774C /* test.json */,
+				149319EC2318B4D40077774C /* HelpReadJsonFile.swift */,
+				149319EE2318B7C80077774C /* GetUserCfgModel.swift */,
+			);
+			path = TestJson;
+			sourceTree = "<group>";
+		};
 		149C0F1E230D409500DC6E2D /* protocalExtention */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +142,7 @@
 				149C0F29230E27E500DC6E2D /* Notification.swift */,
 				149C0F2D230F7ED200DC6E2D /* DouYin */,
 				149C0F1E230D409500DC6E2D /* protocalExtention */,
+				149319E92318B4790077774C /* TestJson */,
 				14C405F9230403D900B400F2 /* Assets.xcassets */,
 				14C405FB230403D900B400F2 /* LaunchScreen.storyboard */,
 				14C405FE230403D900B400F2 /* Info.plist */,
@@ -217,6 +234,7 @@
 				14C405FD230403D900B400F2 /* LaunchScreen.storyboard in Resources */,
 				14C405FA230403D900B400F2 /* Assets.xcassets in Resources */,
 				14C405F8230403D900B400F2 /* Main.storyboard in Resources */,
+				149319EB2318B4960077774C /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149319ED2318B4D40077774C /* HelpReadJsonFile.swift in Sources */,
 				149C0F25230D514800DC6E2D /* PQDataEncodable.swift in Sources */,
 				149C0F2F230F7EE300DC6E2D /* DouYinViewController.swift in Sources */,
 				149C0F39230F91B300DC6E2D /* TestTableViewViewController.swift in Sources */,
@@ -282,6 +301,7 @@
 				149C0F19230D1AF500DC6E2D /* Router.swift in Sources */,
 				149C0F1B230D2ECE00DC6E2D /* String+extension.swift in Sources */,
 				149C0F2A230E27E500DC6E2D /* Notification.swift in Sources */,
+				149319EF2318B7C80077774C /* GetUserCfgModel.swift in Sources */,
 				149C0F28230D51B400DC6E2D /* PQColorable.swift in Sources */,
 				14C405F3230403D900B400F2 /* AppDelegate.swift in Sources */,
 			);
